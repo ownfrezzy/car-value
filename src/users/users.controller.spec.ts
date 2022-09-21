@@ -29,11 +29,9 @@ describe('UsersController', () => {
           password: 'asd',
         } as User);
       },
-      // update: () => {},
     };
 
     fakeAuthService = {
-      // signup: () => {},
       signin: (email: string, password: string) => {
         return Promise.resolve({ id: 1 } as User);
       },
