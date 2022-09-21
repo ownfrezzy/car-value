@@ -12,6 +12,10 @@ export class User {
   @Column()
   password: string;
 
+  // Default param for testing purposes only
+  @Column({ default: true })
+  admin: boolean;
+
   @OneToMany(() => Report, (report) => report.user)
   reports: Report[];
 }
